@@ -579,6 +579,7 @@
 				1497ACDC1F0A9E73003D4ABC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1497ACDD1F0A9E73003D4ABC /* Build configuration list for PBXNativeTarget "PayBillNGIOSSdkTests" */ = {
 			isa = XCConfigurationList;
@@ -587,6 +588,7 @@
 				1497ACDF1F0A9E73003D4ABC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

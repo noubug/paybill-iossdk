@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol PBPDelegate {
-    func onPaymentWindoClosed(ref: String);
+public protocol PBPDelegate {
+     func onPaymentWindoClosed(ref: String);
 }

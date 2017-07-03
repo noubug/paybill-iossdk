@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PayBillNGIOSSdk"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "PayBill.NG IOS SDK helps you receive payments directly on your mobile app"
 
   # This description is used to generate tags and improve search results.

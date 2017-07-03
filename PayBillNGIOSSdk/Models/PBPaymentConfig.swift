@@ -9,21 +9,21 @@
 import UIKit
 import ObjectMapper
 
-class PBPaymentConfig: Mappable {
-    var customerEmail:String!
-    var amount: Double!
-    var organizationCode: String!
-    var organizationUniqueReference: String!
-    var organizationPublicKey:String!
-    var subAccountCode:String?
-    var currency = "NGN"
-    var organizationTransactionCharge: Double?
-    var paymentChargeBearer: String?
+public class PBPaymentConfig: Mappable {
+    public var customerEmail:String!
+    public var amount: Double!
+    public var organizationCode: String!
+    public var organizationUniqueReference: String!
+    public var organizationPublicKey:String!
+    public var subAccountCode:String?
+    public var currency = "NGN"
+    public var organizationTransactionCharge: Double?
+    public var paymentChargeBearer: String?
 
-    required init?(map: Map) {
+    required public init?(map: Map) {
     }
 
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         customerEmail <- map["customer_email"]
         amount <- map["amount"]
         organizationCode <- map["organization_code"]

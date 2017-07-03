@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import ObjectMapper
 
-class PBPaymentViewController: UIViewController, WKNavigationDelegate,WKScriptMessageHandler{
+public class PBPaymentViewController: UIViewController, WKNavigationDelegate,WKScriptMessageHandler{
 
     var webView: WKWebView?
 
@@ -20,7 +20,7 @@ class PBPaymentViewController: UIViewController, WKNavigationDelegate,WKScriptMe
 
     var evaluated = false;
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         self.title = "Make Payment"
@@ -77,7 +77,7 @@ class PBPaymentViewController: UIViewController, WKNavigationDelegate,WKScriptMe
 
     }
 
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+    public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if(message.name == "callbackHandler") {
             if let body = message.body as? String{
                 if body == "close"{
@@ -92,7 +92,7 @@ class PBPaymentViewController: UIViewController, WKNavigationDelegate,WKScriptMe
         }
     }
 
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -101,16 +101,16 @@ class PBPaymentViewController: UIViewController, WKNavigationDelegate,WKScriptMe
 
     }
 
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         displayNavBarActivity()
     }
 
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         self.dismissNavBarActivity()
     }
 
 
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         self.dismissNavBarActivity()
         if !evaluated{
 
