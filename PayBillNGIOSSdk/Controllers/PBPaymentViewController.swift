@@ -56,7 +56,8 @@ public class PBPaymentViewController: UIViewController, WKNavigationDelegate,WKS
 
         webView?.navigationDelegate = self
 
-        let path = Bundle.main.path(forResource: "payment-window", ofType: "html")
+        let localBundle = Bundle(for: self.classForCoder)
+        let path = localBundle.path(forResource: "payment-window", ofType: "html")
         let url = NSURL(fileURLWithPath: path!)
         let request = NSURLRequest(url: url as URL)
 
