@@ -14,9 +14,9 @@ public class PBPaymentViewController: UIViewController, WKNavigationDelegate,WKS
 
     var webView: WKWebView?
 
-    var delegate:PBPDelegate?
+    public var delegate:PBPDelegate?
 
-    var paymentConfig:PBPaymentConfig!
+    public var paymentConfig:PBPaymentConfig!
 
     var evaluated = false;
 
