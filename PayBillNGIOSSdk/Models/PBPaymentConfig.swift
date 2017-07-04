@@ -23,7 +23,7 @@ public class PBPaymentConfig: Mappable {
     required public init?(map: Map) {
     }
 
-    init() {
+    public init() {
     }
 
     public func mapping(map: Map) {
